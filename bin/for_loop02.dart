@@ -1,4 +1,3 @@
-int func(List<int> numbers) {
 /*
    Given a list of numbers, return the sum of the numbers at even index in the list
 Args:
@@ -6,7 +5,17 @@ Args:
 Return: 
   Int: answer
 */
-  return 0;
+int func(List<int> numbers) {
+  int m = 0;
+  for (int i = 0; i < numbers.length; i += 1) {
+    if (i % 2 == 0) {
+      m += numbers[i];
+    }
+  }
+
+  return m;
 }
 
-void main() {}
+void main() {
+  print(func([1, 2, 3, 4, 5]));
+}
